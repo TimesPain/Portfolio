@@ -163,25 +163,40 @@ header h2.active{
 .circle1 {
   background: linear-gradient(235deg, #3E1F9E, #281467, #1E0F4A);
   transform: translate(-100%, -20vh);
-  animation: slideIn1 2s cubic-bezier(.68,-0.55,.27,1.55) forwards;
-  transition: all 0.5s ease;
+  animation: slideIn1 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transition: all 0.8s ease;
 }
 .circle1.active{
-  translate: -300px;
+  translate: -500px;
 }
-
-
-.circle1 h1{
+.circle2.active{
+  translate: 700px;
+}
+.circle1 div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  right: 20%;
+  right: 16%;
   top: 35%;
-  color: antiquewhite;
-    opacity: 0;
+      opacity: 0;
   transform: translateY(30px);
 
   /* Animation */
   animation: fadeInUpName 4s ease forwards;
 }
+
+.circle1 div h2{
+  
+  font-size: 2rem;
+  color: antiquewhite;
+
+}
+.circle1 div h1{
+  font-size: 3rem;
+  color:rgba(112, 16, 222, 0.624);
+}
+
 @keyframes fadeInUpName {
   50%{
       opacity: 0;
@@ -196,21 +211,11 @@ header h2.active{
 .circle2 {
   background: linear-gradient(45deg, #3E1F9E, #281467, #1E0F4A);
   transform: translate(70%, -50%);
-  animation: slideIn2 2s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+  animation: slideIn2 2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+  transition: all 1s ease;
 }
 
 @keyframes slideIn1 {
-  60% {
-    transform: translate(-50%, -20vh);
-  }
-
-  70% {
-    transform: translate(-47%, -20vh);
-  }
-
-  80% {
-    transform: translate(-52%, -20vh);
-  }
 
   to {
     transform: translate(-50%, -20vh);
@@ -218,17 +223,6 @@ header h2.active{
 }
 
 @keyframes slideIn2 {
-  60% {
-    transform: translate(50%, -30%);
-  }
-
-  70% {
-    transform: translate(47%, -27%);
-  }
-
-  80% {
-    transform: translate(52%, -32%);
-  }
 
   to {
     transform: translate(50%, -30%);
