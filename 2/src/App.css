@@ -252,7 +252,7 @@ header h2.active {
 }
 
 .circle2 div button {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), transparent);
   height: 10vh;
   width: 16vh;
   border-radius: 12px;

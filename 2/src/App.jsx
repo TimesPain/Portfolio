@@ -42,8 +42,8 @@ export default function App() {
       <header className={isHeaderrem ? 'active' : ''}>
         <h2 className={headingButtons ? 'active' : ''}>Portfolio</h2>
         <div className="right-side">
-          <button className={headingButtons ? 'active' : ''}>Home</button>
-          <button className={headingButtons ? 'active' : ''}>Projects</button>
+          <button className={headingButtons ? 'active' : ''} onClick={()=>{ContainerElement.current.scrollTop=0;}}>Home</button>
+          <button className={headingButtons ? 'active' : ''} onClick={()=>{ContainerElement.current.scrollTop = window.innerHeight;}}>Projects</button>
           <button className={headingButtons ? 'active' : ''}>Contact Me</button>
         </div>
       </header>
@@ -61,9 +61,7 @@ export default function App() {
 
         <div className={ isCircleIn ? "circle2" : "circle2 active"}>
           <div>
-            <button onClick={()=>{
-              ContainerElement.current.scrollTop = window.innerHeight ;
-            }}>Projects</button>
+            <button onClick={()=>{ContainerElement.current.scrollTop = window.innerHeight;}}>Projects</button>
           </div>
         </div>
       </div>
