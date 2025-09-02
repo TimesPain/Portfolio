@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "manrope";
+    /* name you will use in CSS */
+    src: url("./assets/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+    /* path to your font */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    
+    position: relative;
+    overflow-x: hidden;
+    font-family: manrope;
+    overflow-y: hidden;
+    
+}

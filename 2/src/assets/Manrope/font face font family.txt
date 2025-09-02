@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "MyCustomFont";       /* name you will use in CSS */
+  src: url("fonts/MyFont.ttf") format("truetype"); /* path to your font */
+  font-weight: normal;
+  font-style: normal;
+}
+

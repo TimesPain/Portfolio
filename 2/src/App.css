@@ -1,0 +1,243 @@
+.main-container{
+  position: relative;
+overflow-y: scroll;
+overflow-x: hidden;
+width: 100%;
+height: 100vh;
+
+
+}
+.main-container::-webkit-scrollbar{
+  display: none;
+}
+
+header.active{
+  z-index: 1000;
+  position: fixed;
+  
+  top: 4vh;
+  left: 10vw;
+  right: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background: rgba(22, 12, 72, 0.5);
+
+  
+  backdrop-filter: blur(10px);
+  /*-webkit-text-fill-color: transparent;*/
+
+  background-clip: text;
+
+  -webkit-backdrop-filter: blur(10px);
+  border: solid 2px;
+  border-radius: 5vh;
+  border-color: rgba(22, 12, 72, 0.2);
+  padding-left: 2vw;
+  box-shadow: 0px 0px 2px 0px rgba(0,0 ,0 , 0.3);
+  
+
+}
+
+header {
+  z-index: 1000;
+  position: fixed;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background: rgba(22, 12, 72, 0.5);
+
+  
+  backdrop-filter: blur(10px);
+  /*-webkit-text-fill-color: transparent;*/
+
+  background-clip: text;
+
+  -webkit-backdrop-filter: blur(10px);
+  border: solid 2px;
+  
+  border-color: rgba(22, 12, 72, 0.5);
+  padding-left: 2vw;
+  transition: all 0.5s ease;
+
+}
+
+
+header h2 {
+  /* font/text adjustments */
+  font-size: 3rem;
+  color: antiquewhite;
+
+  /* Start invisible */
+  opacity: 0;
+  transform: translateY(30px);
+
+  /* Animation */
+  animation: fadeInUp 2s ease forwards;
+  transition: all 0.2s ease;
+}
+header h2.active{
+  color: #160c48;
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.right-side{
+  margin-right: 3rem;
+}
+.right-side button{
+  padding: 0.7rem;
+  height: 2.5rem;
+  margin-right: 1.5rem;
+  background-color: transparent;
+  border-color: rgba(22, 12, 72, 0.2);
+  border-width: 1px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: antiquewhite;
+  
+  border-radius: 1rem;
+
+    /* Start invisible */
+  opacity: 0;
+  transform: translateY(30px);
+
+  /* Animation */
+  animation: fadeInUp 2s ease forwards;
+  transition: all 0.2s ease;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.right-side button.active{
+  color: #160c48;
+
+}
+
+
+
+.home {
+  z-index: 3;
+  display: flex;
+  flex-wrap: none;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(55deg, #3E1F9E, #281467, #1E0F4A);
+}
+
+
+
+.main-content{
+  position: relative;
+  top: 300px;
+}
+
+
+.circle1,
+.circle2 {
+  position: absolute;
+  z-index: 3;
+
+  height: 1300px;
+  width: 1300px;
+  border: none;
+  border-radius: 50%;
+
+  filter: drop-shadow(0px 0 10px #150a3c);
+
+
+
+
+
+}
+
+.circle1 {
+  background: linear-gradient(235deg, #3E1F9E, #281467, #1E0F4A);
+  transform: translate(-100%, -20vh);
+  animation: slideIn1 2s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+  transition: all 0.5s ease;
+}
+.circle1.active{
+  translate: -300px;
+}
+
+
+.circle1 h1{
+  position: absolute;
+  right: 20%;
+  top: 35%;
+  color: antiquewhite;
+    opacity: 0;
+  transform: translateY(30px);
+
+  /* Animation */
+  animation: fadeInUpName 4s ease forwards;
+}
+@keyframes fadeInUpName {
+  50%{
+      opacity: 0;
+  transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.circle2 {
+  background: linear-gradient(45deg, #3E1F9E, #281467, #1E0F4A);
+  transform: translate(70%, -50%);
+  animation: slideIn2 2s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+}
+
+@keyframes slideIn1 {
+  60% {
+    transform: translate(-50%, -20vh);
+  }
+
+  70% {
+    transform: translate(-47%, -20vh);
+  }
+
+  80% {
+    transform: translate(-52%, -20vh);
+  }
+
+  to {
+    transform: translate(-50%, -20vh);
+  }
+}
+
+@keyframes slideIn2 {
+  60% {
+    transform: translate(50%, -30%);
+  }
+
+  70% {
+    transform: translate(47%, -27%);
+  }
+
+  80% {
+    transform: translate(52%, -32%);
+  }
+
+  to {
+    transform: translate(50%, -30%);
+  }
+}
+
+.projects {
+  z-index: 5;
+  height: 100vh;
+  background-color: antiquewhite;
+  position: relative;
+}
