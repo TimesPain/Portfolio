@@ -59,7 +59,13 @@ export default function App() {
           </div>
         </div>
 
-        <div className={ isCircleIn ? "circle2" : "circle2 active"}></div>
+        <div className={ isCircleIn ? "circle2" : "circle2 active"}>
+          <div>
+            <button onClick={()=>{
+              ContainerElement.current.scrollTop = window.innerHeight ;
+            }}>Projects</button>
+          </div>
+        </div>
       </div>
       <div className="projects">
         <div className="project"></div>
