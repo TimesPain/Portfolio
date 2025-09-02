@@ -1,13 +1,12 @@
 import { useState, useRef } from 'react';
-
 import './App.css';
 
 export default function App() {
 
   const ContainerElement = useRef(null);
   const [headingButtons, setHeadingButtons] = useState(false);
-  const [isHeaderrem,setIsHeaderrem] = useState(false);
-  const [isCircleIn,setIsCircleIn] = useState(true);
+  const [isHeaderrem, setIsHeaderrem] = useState(false);
+  const [isCircleIn, setIsCircleIn] = useState(true);
 
 
 
@@ -18,50 +17,37 @@ export default function App() {
         if (ContainerElement.current.scrollTop > window.innerHeight * 0.07) {
           setIsHeaderrem(true);
           setIsCircleIn(false);
-
         }
         else {
           setIsHeaderrem(false);
           setIsCircleIn(true);
-
         }
       }
-        if (ContainerElement.current.scrollTop > window.innerHeight * 0.9) {
-
-          setHeadingButtons(true);
-
-        }
-        else {
-          setHeadingButtons(false);
-
-        }
-      
-
-
+      if (ContainerElement.current.scrollTop > window.innerHeight * 0.9) {
+        setHeadingButtons(true);
+      }
+      else {
+        setHeadingButtons(false);
+      }
     }}>
       <header className={isHeaderrem ? 'active' : ''}>
         <h2 className={headingButtons ? 'active' : ''}>Portfolio</h2>
         <div className="right-side">
-          <button className={headingButtons ? 'active' : ''} onClick={()=>{ContainerElement.current.scrollTop=0;}}>Home</button>
-          <button className={headingButtons ? 'active' : ''} onClick={()=>{ContainerElement.current.scrollTop = window.innerHeight;}}>Projects</button>
+          <button className={headingButtons ? 'active' : ''} onClick={() => { ContainerElement.current.scrollTop = 0; }}>Home</button>
+          <button className={headingButtons ? 'active' : ''} onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>Projects</button>
           <button className={headingButtons ? 'active' : ''}>Contact Me</button>
         </div>
       </header>
-
-
       <div className="home">
-
-        <div className={ isCircleIn ? "circle1" : "circle1 active"}>
+        <div className={isCircleIn ? "circle1" : "circle1 active"}>
           <div>
             <h2>Welcome To My Portfolio</h2>
             <h1>Website</h1>
-
           </div>
         </div>
-
-        <div className={ isCircleIn ? "circle2" : "circle2 active"}>
+        <div className={isCircleIn ? "circle2" : "circle2 active"}>
           <div>
-            <button onClick={()=>{ContainerElement.current.scrollTop = window.innerHeight;}}>Projects</button>
+            <button onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>Projects</button>
           </div>
         </div>
       </div>
