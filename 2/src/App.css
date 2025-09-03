@@ -203,6 +203,11 @@ header h2.active {
 
 .circle1 div h1 {
   font-size: 3rem;
+    background: linear-gradient(90deg, rgba(112, 16, 222, 0.624), #feb47b);
+     /* gradient colors */
+     background-clip: text;
+    -webkit-background-clip: text;/* clips background to text */
+  -webkit-text-fill-color: transparent; /* makes text transparent to show background */
   color: rgba(112, 16, 222, 0.624);
 }
 
