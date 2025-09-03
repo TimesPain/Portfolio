@@ -244,6 +244,27 @@ header h2.active {
   }
 }
 
+.circle2 .logo{
+  position:absolute;
+  top: 80%;
+  left: 36rem;
+  height: 4rem;
+
+ 
+}
+
+.circle2 .logo1{
+  transform: translateX(6rem);
+
+}
+.circle2 .logo2{
+  transform: translateY(-6rem) ;
+
+}
+.circle2 .logo3{
+  transform: translateY(-6rem) translateX(6rem);
+}
+
 .circle2 div {
   position: absolute;
   top: 50%;

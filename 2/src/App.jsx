@@ -1,4 +1,8 @@
 import { useState, useRef } from 'react';
+import reactLogo from './assets/react.svg';
+import javascriptLogo from './assets/javascript.svg';
+import htmlLogo from './assets/html.svg';
+import cssLogo from './assets/css.svg';
 import './App.css';
 
 export default function App() {
@@ -46,6 +50,10 @@ export default function App() {
           </div>
         </div>
         <div className={isCircleIn ? "circle2" : "circle2 active"}>
+          <img src={htmlLogo} className="logo logo1" alt="Logo 1" />
+          <img src={cssLogo} className="logo logo2" alt="Logo 2" />
+          <img src={javascriptLogo} className="logo logo3" alt="Logo 3" />
+          <img src={reactLogo} className="logo logo4" alt="Logo 4" />
           <div>
             <button onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>Projects</button>
           </div>
