@@ -1,7 +1,7 @@
 .main-container {
   position: relative;
   overflow-y: scroll;
-  overflow-x: hidden;
+
   width: 100%;
   height: 100vh;
 
@@ -244,27 +244,48 @@ header h2.active {
   }
 }
 
-.circle2 .logo{
+.logo{
   position:absolute;
-  top: 80%;
-  left: 36rem;
+
   height: 4rem;
 
  
 }
 
-.circle2 .logo1{
-  transform: translateX(6rem);
+.logo1{
+  top:40rem;
+  transform-origin:650px 0px ;
+  animation: spin 10s cubic-bezier(0,0,0,0) infinite;
 
 }
-.circle2 .logo2{
-  transform: translateY(-6rem) ;
+.logo2{
+  top: 76.5rem;
+  left: 40rem;
+  transform-origin:10px -36.5rem ;
+    animation: spin 10s cubic-bezier(0,0,0,0) infinite;
+ 
+  
 
 }
-.circle2 .logo3{
-  transform: translateY(-6rem) translateX(6rem);
+.logo3{
+  top: 40rem;
+  right: 10px;
+  transform-origin:-36rem 5px ;
+  animation: spin 10s cubic-bezier(0,0,0,0) infinite;
+}
+.logo4{
+  top: 5px;
+  left: 40rem;
+  transform-origin:10px 40rem ;
+  animation: spin 10s cubic-bezier(0,0,0,0) infinite;
 }
 
+
+@keyframes spin{
+  to{
+    transform: rotate(-360deg);
+  }
+}
 .circle2 div {
   position: absolute;
   top: 50%;
