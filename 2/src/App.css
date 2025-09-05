@@ -212,18 +212,17 @@ header h2.active {
   font-weight: bolder;
   animation: float 3s infinite linear;
 }
- @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-/*@keyframes float{
-  50%{
-    transform: translate(0,2rem);
+@keyframes float{
+  25%{
+    transform: translate(0,-0.5rem);
+  }
+  75%{
+    transform: translate(0,0.5rem);
   }
   to{
     transform: translate(0,0);
   }
-}*/
+}
 
 @keyframes fadeInUpName {
   50% {
