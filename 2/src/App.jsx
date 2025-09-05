@@ -16,11 +16,30 @@ export default function App() {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
+  async function ToHome() {
+    for (let i = window.innerHeight; i >= 0; i--) {
+              if(ContainerElement.current.scrollTop === 0){
+                  break;
+                }
+              i % 10 == 0 && await delay(1);
+              ContainerElement.current.scrollTop = i;
+            }
+  }
+  async function ToProjects(){
+    for (let i = 0; i <= window.innerHeight; i++) {
+                if(ContainerElement.current.scrollTop === window.innerHeight){
+                  break;
+                }
+                i % 10 == 0 && await delay(1);
+                ContainerElement.current.scrollTop = i;
+              }
+  }
 
   return (
     <div className="main-container" ref={ContainerElement} onScroll={() => {
       if (ContainerElement.current) {
-        if (ContainerElement.current.scrollTop > window.innerHeight * 0.07) {
+        const scrollTop = ContainerElement.current.scrollTop;
+        if (scrollTop > window.innerHeight * 0.07) {
           setIsHeaderrem(true);
           setIsCircleIn(false);
         }
@@ -28,24 +47,20 @@ export default function App() {
           setIsHeaderrem(false);
           setIsCircleIn(true);
         }
-      }
-      if (ContainerElement.current.scrollTop > window.innerHeight * 0.9) {
+      
+      if (scrollTop > window.innerHeight * 0.9) {
         setHeadingButtons(true);
       }
       else {
         setHeadingButtons(false);
       }
+    }
     }}>
       <header className={isHeaderrem ? 'active' : ''}>
         <h2 className={headingButtons ? 'active' : ''}>Portfolio</h2>
         <div className="right-side">
-          <button className={headingButtons ? 'active' : ''} onClick={async () => {
-            for (let i = window.innerHeight; i >= 0; i--) {
-              i % 10 == 0 && await delay(1);
-              ContainerElement.current.scrollTop = i;
-            }
-          }}>Home</button>
-          <button className={headingButtons ? 'active' : ''} onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>Projects</button>
+          <button className={headingButtons ? 'active' : ''} onClick={ToHome}>Home</button>
+          <button className={headingButtons ? 'active' : ''} onClick={ToProjects}>Projects</button>
           <button className={headingButtons ? 'active' : ''}>Contact Me</button>
         </div>
       </header>
@@ -62,12 +77,7 @@ export default function App() {
           <img src={javascriptLogo} className="logo logo3" alt="Logo 3" />
           <img src={reactLogo} className="logo logo4" alt="Logo 4" />
           <div>
-            <button onClick={async () => {
-              for (let i = 0; i <= window.innerHeight; i++) {
-                i % 10 == 0 && await delay(1);
-                ContainerElement.current.scrollTop = i;
-              }
-            }}>&lt;/&gt;</button>
+            <button onClick={ToProjects}>&lt;/&gt;</button>
           </div>
         </div>
       </div>
