@@ -55,7 +55,7 @@ export default function App() {
           <img src={javascriptLogo} className="logo logo3" alt="Logo 3" />
           <img src={reactLogo} className="logo logo4" alt="Logo 4" />
           <div>
-            <button onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>Projects</button>
+            <button onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>&lt;/&gt;</button>
           </div>
         </div>
       </div>
