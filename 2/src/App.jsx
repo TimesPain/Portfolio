@@ -12,7 +12,9 @@ export default function App() {
   const [isHeaderrem, setIsHeaderrem] = useState(false);
   const [isCircleIn, setIsCircleIn] = useState(true);
 
-
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
 
   return (
@@ -37,7 +39,12 @@ export default function App() {
       <header className={isHeaderrem ? 'active' : ''}>
         <h2 className={headingButtons ? 'active' : ''}>Portfolio</h2>
         <div className="right-side">
-          <button className={headingButtons ? 'active' : ''} onClick={() => { ContainerElement.current.scrollTop = 0; }}>Home</button>
+          <button className={headingButtons ? 'active' : ''} onClick={async () => {
+            for (let i = window.innerHeight; i >= 0; i--) {
+              i % 10 == 0 && await delay(1);
+              ContainerElement.current.scrollTop = i;
+            }
+          }}>Home</button>
           <button className={headingButtons ? 'active' : ''} onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>Projects</button>
           <button className={headingButtons ? 'active' : ''}>Contact Me</button>
         </div>
@@ -55,7 +62,12 @@ export default function App() {
           <img src={javascriptLogo} className="logo logo3" alt="Logo 3" />
           <img src={reactLogo} className="logo logo4" alt="Logo 4" />
           <div>
-            <button onClick={() => { ContainerElement.current.scrollTop = window.innerHeight; }}>&lt;/&gt;</button>
+            <button onClick={async () => {
+              for (let i = 0; i <= window.innerHeight; i++) {
+                i % 10 == 0 && await delay(1);
+                ContainerElement.current.scrollTop = i;
+              }
+            }}>&lt;/&gt;</button>
           </div>
         </div>
       </div>
