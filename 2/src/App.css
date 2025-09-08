@@ -263,8 +263,10 @@ header h2.active {
 
   height: 4rem;
   writing-mode: vertical-rl;
+  perspective:initial;
  
 }
+
 
 .logo1{
   top:40rem;

@@ -57,7 +57,7 @@ export default function App() {
     }
     }}>
       <header className={isHeaderrem ? 'active' : ''}>
-        <h2 className={headingButtons ? 'active' : ''}>Portfolio</h2>
+        <h2 className={headingButtons ? 'active' : ''}>MADLOCK</h2>
         <div className="right-side">
           <button className={headingButtons ? 'active' : ''} onClick={ToHome}>Home</button>
           <button className={headingButtons ? 'active' : ''} onClick={ToProjects}>Projects</button>
